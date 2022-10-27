@@ -53,30 +53,3 @@ body {
   border: 1px solid #ececec;
 }
 
-.modal-submit-btn,
-.subscribe-submit-btn,
-.hat-btn {
-  cursor: pointer;
-  background-color: var(--accent-color);
-  font-family: inherit;
-  font-weight: var(--bold-font-weight);
-  font-size: var(--second-font-size);
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--main-color);
-  border: var(--accent-color);
-  min-width: 216px;
-  padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hat-btn:hover,
-.hat-btn:focus,
-.modal-submit-btn:hover,
-.modal-submit-btn:focus,
-.subscribe-submit-btn:hover,
-.subscribe-submit-btn:focus {
-  background-color: #188ce8;
-}

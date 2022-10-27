@@ -1,14 +1,14 @@
-@import "./header";
-@import "./hat";
-@import "./features";
-@import "./tasks";
-@import "./team";
-@import "./clients";
-@import "./footer";
-@import "./portfolio";
+@import "./reset";
+@import "./vars";
+@import "./components";
+@import "./visually-hidden";
 @import "./modal";
 
-@import "./vars";
-@import "./reset";
-@import "./visually-hidden";
-@import "./common";
+@import "./layers/header";
+@import "./layers/hat";
+@import "./layers/features";
+@import "./layers/tasks";
+@import "./layers/team";
+@import "./layers/clients";
+@import "./layers/footer";
+@import "./layers/portfolio";
