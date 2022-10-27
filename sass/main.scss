@@ -1,8 +1,9 @@
-@import "./reset";
-@import "./vars";
-@import "./components";
-@import "./visually-hidden";
-@import "./modal";
+@import "./base/reset";
+@import "./utils/vars";
+@import "./components/common";
+@import "./components/btns";
+@import "./utils/visually-hidden";
+@import "./components/modal";
 
 @import "./layers/header";
 @import "./layers/hat";

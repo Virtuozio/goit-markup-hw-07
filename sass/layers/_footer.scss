@@ -28,6 +28,10 @@
   line-height: 1.71;
   color: var(--main-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .footer-mail,
 .footer-tel {
@@ -35,15 +39,12 @@
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
-.footer-tel:focus,
-.footer-tel:hover,
-.footer-mail:hover,
-.footer-mail:focus,
-.footer-maps:hover,
-.footer-maps:focus {
-  color: var(--accent-color);
-}
+
 .links-container {
   display: flex;
   margin-left: 0;
@@ -61,17 +62,18 @@
   line-height: 1.25;
   color: var(--main-color);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline: transparent;
+    border: 1px solid var(--main-color);
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: var(--second-font-size);
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
-.email-input:focus {
-  outline: transparent;
-  border: 1px solid var(--main-color);
-}
-.email-input::placeholder {
-  font-weight: 400;
-  font-size: var(--second-font-size);
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-}
+
 .subscribe-text,
 .links-text {
   font-weight: var(--bold-font-weight);
@@ -92,11 +94,12 @@
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
 }
-.footer-soc-links:hover,
-.footer-soc-links:focus {
-  background-color: #2196f3;
-}
+
 .footer-soc-links-svg {
   fill: #ffffff;
 }
