@@ -74,26 +74,6 @@ body {
   color: var(--accent-color);
 }
 
-.current {
-  color: var(--accent-color);
-  position: relative;
-}
-.current:hover {
-  transition: transform 500ms;
-}
-.current:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background: var(--accent-color);
-  border-radius: 2px;
-  margin: -2px;
-  transition: transform 500ms;
-}
-
 .line {
   background-color: #ececec;
   width: 100%;
@@ -350,17 +330,17 @@ body {
   padding-bottom: 25px;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.header-navigation {
+.navigation {
   display: flex;
   align-items: center;
 }
 
-.header-logo {
+.logo {
   font-family: "Raleway";
   font-weight: var(--bold-font-weight);
   font-size: 26px;
@@ -369,16 +349,16 @@ body {
   margin-right: 93px;
 }
 
-.header-contacts {
+.contacts {
   margin-left: auto;
 }
 
-.header-list {
+.menu {
   display: flex;
   gap: 50px;
 }
 
-.header-link {
+.menu__link {
   font-weight: var(--semibold-font-weight);
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -386,12 +366,29 @@ body {
   padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-link:focus, .header-link:hover {
+.menu__link:focus, .menu__link:hover {
   color: var(--accent-color);
 }
 
-.header-mail,
-.header-tel {
+.--current {
+  color: var(--accent-color);
+  position: relative;
+}
+.--current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background: var(--accent-color);
+  border-radius: 2px;
+  margin: -2px;
+  transition: transform 500ms;
+}
+
+.contacts__mail,
+.contacts__tel {
   font-weight: var(--semibold-font-weight);
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -400,14 +397,14 @@ body {
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-mail:hover, .header-mail:focus,
-.header-tel:hover,
-.header-tel:focus {
+.contacts__mail:hover, .contacts__mail:focus,
+.contacts__tel:hover,
+.contacts__tel:focus {
   color: var(--accent-color);
 }
 
-.header-envelope,
-.header-smartphone {
+.contacts__envelope,
+.contacts__smartphone {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -488,24 +485,26 @@ body {
   padding-top: 0;
 }
 
-.tasks-title {
+.tasks__title {
   font-weight: var(--bold-font-weight);
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
 
-.tasks-content {
-  margin-top: 118px;
-}
-
-.tasks-list {
+.tasks__list {
   margin-top: 50px;
   display: flex;
   gap: 30px;
 }
 
-.tasks-text {
+.tasks__item {
+  width: calc((100% - 60px) / 3);
+  position: relative;
+  z-index: -1;
+}
+
+.tasks__text {
   position: absolute;
   bottom: 0;
   height: 70px;
@@ -518,12 +517,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.tasks-item {
-  width: calc((100% - 60px) / 3);
-  position: relative;
-  z-index: -1;
 }
 
 .team {
@@ -582,9 +575,7 @@ body {
   color: #afb1b8;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.team-soc-links:hover,
-.team-soc-links:focus {
+.team-soc-links:hover, .team-soc-links:focus {
   background-color: var(--accent-color);
   color: var(--main-color);
 }
@@ -597,7 +588,7 @@ body {
   padding: 30px 0px;
 }
 
-.clients-title {
+.clients__title {
   font-weight: var(--bold-font-weight);
   font-size: 36px;
   line-height: 1.16;
@@ -605,17 +596,17 @@ body {
   margin-bottom: 50px;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   gap: 30px;
 }
 
-.clients-item {
+.clients__item {
   width: 170px;
   height: 92px;
 }
 
-.clients-link {
+.clients__link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -626,12 +617,12 @@ body {
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-link:hover, .clients-link:focus {
+.clients__link:hover, .clients__link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
 }
 
-.clients-svg {
+.clients__svg {
   fill: currentColor;
 }
 

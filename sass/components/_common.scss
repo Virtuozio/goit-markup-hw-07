@@ -28,27 +28,6 @@ body {
 .accent {
   color: var(--accent-color);
 }
-
-.current {
-  color: var(--accent-color);
-  position: relative;
-  &:hover {
-    transition: transform 500ms;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      bottom: 0;
-      left: 0;
-      background: var(--accent-color);
-      border-radius: 2px;
-      margin: -2px;
-      transition: transform 500ms;
-    }
-  }
-}
-
 .line {
   background-color: #ececec;
   width: 100%;
